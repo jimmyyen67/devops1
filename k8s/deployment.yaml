@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: example-app
+  name: jimmy-app
   labels:
-    app: example-app
+    app: jimmy-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: example-app
+      app: jimmy-app
   template:
     metadata:
       labels:
-        app: example-app
+        app: jimmy-app
     spec:
       containers:
-        - name: example-app
-          image: asia-east1-docker.pkg.dev/smiling-stock-425106-c9/devops-repo/example-app-app:latest
+        - name: jimmy-app
+          image: asia-east1-docker.pkg.dev/smiling-stock-425106-c9/devops-repo/jimmy-app:2
           ports:
             - containerPort: 80
